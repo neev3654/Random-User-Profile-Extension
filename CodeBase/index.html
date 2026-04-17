@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User Profiles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Random User Profiles</h1>
+    </header>
+    <div class="dashboard">
+        <button id="filter-toggle">Filters</button>
+        <div class="filters-dropdown" id="filters-dropdown" style="display: none;">
+            <div class="filters">
+                <h4>Gender</h4>
+                <div class="gender-filter">
+                    <label><input type="checkbox" value="male" id="male-checkbox"> Male</label>
+                    <label><input type="checkbox" value="female" id="female-checkbox"> Female</label>
+                </div>
+                <div class="nationality-filter" id="nationality-checkboxes">
+                </div>
+            </div>
+        </div>
+        <input type="text" id="search-input" placeholder="Search by name">
+        <button id="regenerate-btn">Regenerate</button>
+        <div class="sort-controls">
+            <select id="sort-select">
+                <option value="name">Sort by Name</option>
+                <option value="age">Sort by Age</option>
+                <option value="country">Sort by Country</option>
+            </select>
+        </div>
+        <div class="stats">
+            <span id="male-count">Males: 0</span>
+            <span id="female-count">Females: 0</span>
+            <span id="country-count">Countries: 0</span>
+        </div>
+    </div>
+    <div class="tabs">
+        <button id="all-tab" class="active">All</button>
+        <button id="favorites-tab">Favorites</button>
+    </div>
+    <div class="loading" id="loading">Loading...</div>
+    <div class="error" id="error" style="display: none;">Error loading users.</div>
+    <main id="cards-container" class="cards-grid">
+        
+        <div class="card skeleton">
+            <div class="skeleton-avatar"></div>
+            <div class="skeleton-text"></div>
+            <div class="skeleton-text short"></div>
+            <div class="skeleton-text short"></div>
+            <div class="skeleton-text short"></div>
+            <div class="skeleton-buttons">
+                <div class="skeleton-btn"></div>
+                <div class="skeleton-btn"></div>
+            </div>
+        </div>
+       
+        <div class="card skeleton">
+            <div class="skeleton-avatar"></div>
+            <div class="skeleton-text"></div>
+            <div class="skeleton-text short"></div>
+            <div class="skeleton-text short"></div>
+            <div class="skeleton-text short"></div>
+            <div class="skeleton-buttons">
+                <div class="skeleton-btn"></div>
+                <div class="skeleton-btn"></div>
+            </div>
+        </div>
+      
+    </main>
+    <button id="load-more-btn" style="display: none;">Load More</button>
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-details">
+              
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

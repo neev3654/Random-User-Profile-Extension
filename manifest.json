@@ -1,0 +1,9 @@
+{
+    "name" : "Random User Profile Cards",
+    "version" : "1.1.1",
+    "description" : "Search Random User Profile Cards",
+    "manifest_version" : 3 ,
+    "action" : {
+        "default_popup" : "Codebase/index.html"
+    }
+}
